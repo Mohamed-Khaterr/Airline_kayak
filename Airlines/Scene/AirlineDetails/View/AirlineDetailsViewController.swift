@@ -68,6 +68,7 @@ class AirlineDetailsViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
         viewModel.changeAirlineFavoriteStatus()
+        Alert.loader(on: self, delay: .now() + 3)
     }
     
     @IBAction func visitWebsiteButtonPressed(_ sender: UIButton) {

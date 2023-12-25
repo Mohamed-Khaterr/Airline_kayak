@@ -69,6 +69,7 @@ class FavoriteAirlinesDB: FavoriteAirlinesDBProtocol {
     func delete(_ airline: Airline) {
         if let managedObject = records[airline] {
             context.delete(managedObject)
+            try? context.save()
             fetch()
         }
     }

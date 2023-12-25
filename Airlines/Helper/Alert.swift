@@ -25,4 +25,14 @@ struct Alert {
             vc.present(alert, animated: true)
         }
     }
+    
+    static func loader(on vc: UIViewController, delay: DispatchTime) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: nil, message: "Loading..", preferredStyle: .alert)
+            vc.present(alert, animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alert.dismiss(animated: true)
+            }
+        }
+    }
 }
