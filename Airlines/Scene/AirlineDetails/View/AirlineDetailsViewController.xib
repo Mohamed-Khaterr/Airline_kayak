@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AirlineDetailsViewController" customModule="Airlines" customModuleProvider="target">
+            <connections>
+                <outlet property="favoriteButton" destination="uAV-ze-1uY" id="rcY-4T-sOl"/>
+                <outlet property="logoImageView" destination="raF-1B-Vp6" id="4A1-3n-SvU"/>
+                <outlet property="nameLabel" destination="y31-hZ-WDg" id="GAa-X7-7Uc"/>
+                <outlet property="phoneLabel" destination="ycG-x4-w6h" id="8v5-6W-VRP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="raF-1B-Vp6">
+                    <rect key="frame" x="0.0" y="58.999999999999986" width="393" height="255.66666666666663"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDZ-e6-J1c">
+                    <rect key="frame" x="137.66666666666666" y="755.66666666666663" width="118" height="34.333333333333371"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="visit website"/>
+                    <connections>
+                        <action selector="visitWebsiteButtonPressed:" destination="-1" eventType="touchUpInside" id="7p5-uc-ctI"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-SH-KVR">
+                    <rect key="frame" x="18" y="342.66666666666669" width="357" height="40.666666666666686"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airline Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y31-hZ-WDg">
+                            <rect key="frame" x="0.0" y="0.0" width="291" height="40.666666666666664"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAV-ze-1uY">
+                            <rect key="frame" x="307" y="0.0" width="50" height="40.666666666666664"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="sa7-Od-5cR"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                            <connections>
+                                <action selector="favoriteButtonPressed:" destination="-1" eventType="touchUpInside" id="s53-at-5Sr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycG-x4-w6h">
+                    <rect key="frame" x="16" y="399.33333333333331" width="359" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="AccentColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ycG-x4-w6h" secondAttribute="trailing" constant="18" id="ALL-Bs-W3V"/>
+                <constraint firstItem="PV5-SH-KVR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="18" id="Cqo-6J-d6E"/>
+                <constraint firstItem="ycG-x4-w6h" firstAttribute="top" secondItem="PV5-SH-KVR" secondAttribute="bottom" constant="16" id="J70-M8-NxW"/>
+                <constraint firstItem="yDZ-e6-J1c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PC2-aQ-dKy"/>
+                <constraint firstItem="raF-1B-Vp6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="VHr-dA-XKf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PV5-SH-KVR" secondAttribute="trailing" constant="18" id="b30-o8-Vko"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="raF-1B-Vp6" secondAttribute="trailing" id="c3B-Wg-C6V"/>
+                <constraint firstItem="PV5-SH-KVR" firstAttribute="top" secondItem="raF-1B-Vp6" secondAttribute="bottom" constant="28" id="duX-Jf-JDH"/>
+                <constraint firstItem="raF-1B-Vp6" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="fbl-h8-9AI"/>
+                <constraint firstItem="raF-1B-Vp6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="n0r-kF-xLp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yDZ-e6-J1c" secondAttribute="bottom" constant="28" id="uR6-fb-DfN"/>
+                <constraint firstItem="ycG-x4-w6h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="w26-mi-vq5"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
